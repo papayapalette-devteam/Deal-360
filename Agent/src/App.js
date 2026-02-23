@@ -7,7 +7,11 @@ import {  Routes, Route, BrowserRouter } from "react-router-dom";
 // import { AdminLayout } from "./components/Admin/AdminLayout";
 
 import { Toaster } from "./UI/toaster";
-import SignIn from "./components/Agent/Auth/auth";
+import AgentSignIn from "./components/Agent/Auth/agentauth";
+import ProfessionSignIn from "./components/Agent/Auth/profession_auth";
+import ForgetPassword from "./components/Agent/Auth/forget_password";
+import VerifyOTP from "./components/Agent/Auth/verify_otp";
+import ChangePassword from "./components/Agent/Auth/change_passowrd";
 
 
 
@@ -20,7 +24,11 @@ function App() {
    <Toaster/>
     <BrowserRouter>
       <Routes>
-         <Route path="/" element={<SignIn/>}></Route>
+         <Route path="/" element={<AgentSignIn/>}></Route>
+         <Route path="/profession-login" element={<ProfessionSignIn/>}></Route>
+         <Route path="/forget-password" element={<ForgetPassword/>}></Route>
+         <Route path="/verify-otp" element={<VerifyOTP/>}></Route>
+         <Route path="/change-password" element={<ChangePassword/>}></Route>
     
       {/* <Route element={<ProtectedRoute />}> */}
        {/* Admin Routes */}

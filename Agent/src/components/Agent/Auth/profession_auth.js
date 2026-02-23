@@ -2,8 +2,11 @@ import { useState } from "react";
 import { FormInput, PasswordInput } from "../../../UI/FormInput";
 // import { BrandButton } from "../components/ui/BrandButton";
 import logo from "../../../assets/images/image.png 1.png"
+import { useNavigate } from "react-router-dom";
 
-export default function SignIn() {
+export default function ProfessionSignIn() {
+  const navigate=useNavigate()
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
@@ -15,7 +18,7 @@ export default function SignIn() {
         <img
           src={logo}
           alt="Evelyn on the Park"
-          className="max-w-full max-h-full object-contain ml-[-4px] mt-[-4px]"
+          className="max-w-full max-h-full object-contain ml-[-4px] mt-[-4px] "
         />
       </div>
 
@@ -29,11 +32,11 @@ export default function SignIn() {
             <div className="flex flex-col gap-12">
 
               {/* Tab row */}
-              <div className="flex flex-col gap-4">
-                <div className="flex p-2 bg-black/5 rounded-lg overflow-hidden">
-                  <div className="flex-1 flex items-center justify-center h-10 px-2 rounded-lg">
-                    <span className="font-poppins font-medium text-base text-black">
-                      User
+              <div className="flex flex-col gap-4 ">
+                <div className="flex p-2 bg-black/5 rounded-lg overflow-hidden ">
+                  <div className="btn-primary flex-1 flex items-center justify-center h-10 px-2 rounded-lg">
+                    <span className="font-poppins font-medium text-base text-black ">
+                      Professional
                     </span>
                   </div>
                 </div>
@@ -86,6 +89,7 @@ export default function SignIn() {
                     </label>
                     <button
                       type="button"
+                      onClick={()=>navigate("/forget-password")}
                       className="font-manrope font-normal text-base text-[#F88379] leading-[150%] hover:underline"
                     >
                       Forgot password?
