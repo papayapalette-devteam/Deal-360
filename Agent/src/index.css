@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 17% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 160 100% 75%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 4 91% 72%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 38%;
+    --input: 0 0% 38%;
+    --ring: 160 100% 75%;
+
+    --radius: 0.5rem;
+
+    /* Brand */
+    --brand-primary: 160 100% 75%;
+    --brand-secondary: 4 91% 72%;
+    --brand-grey-label: 0 0% 38%;
+    --brand-grey-placeholder: 208 7% 46%;
+    --brand-neutral: 136 4% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+/* ─── Reusable component classes ──────────────────────────────── */
+@layer components {
+  /* Inputs */
+  .form-input {
+    @apply w-full h-12 px-3 py-2 rounded border border-[#616161] bg-white
+           text-base font-normal text-[#6C757D] placeholder-[#6C757D]
+           outline-none transition-colors duration-200;
+    font-family: 'Manrope', sans-serif;
+  }
+  .form-input:focus {
+    @apply border-[#7FFFD4] ring-2 ring-[#7FFFD4]/30;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 px-8 py-4 rounded-lg
+           bg-[#7FFFD4] text-black font-medium text-base transition-opacity duration-200;
+    font-family: 'Manrope', sans-serif;
+  }
+  .btn-primary:hover {
+    @apply opacity-90;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-center gap-2 px-8 py-4 rounded-lg
+           bg-[#F88379] text-black font-medium text-base transition-opacity duration-200;
+    font-family: 'Manrope', sans-serif;
+  }
+  .btn-secondary:hover {
+    @apply opacity-90;
+  }
+
+  .btn-outline {
+    @apply flex items-center justify-center gap-2 px-8 py-4 rounded-lg
+           border-2 border-[#7FFFD4] bg-white text-black font-medium text-base
+           shadow transition-opacity duration-200;
+    font-family: 'Manrope', sans-serif;
+  }
+  .btn-outline:hover {
+    @apply opacity-80;
+  }
+}
