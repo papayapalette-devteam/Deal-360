@@ -15,7 +15,7 @@ export default function SignIn() {
         <img
           src={logo}
           alt="Evelyn on the Park"
-          className="absolute inset-0 w-full h-full object-contain object-center"
+          className="max-w-full max-h-full object-contain ml-[-4px] mt-[-4px]"
         />
       </div>
 

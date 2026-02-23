@@ -44,6 +44,11 @@
     --brand-neutral: 136 4% 43%;
   }
 }
+html, body, #root {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 @layer base {
   * {
