@@ -15,6 +15,8 @@ import ChangePassword from "./components/Agent/Auth/change_passowrd";
 import UserSingup from "./components/Agent/Auth/user_signup";
 import BrokerageSignup from "./components/Agent/Auth/brokerage_signup";
 import AgentSignup from "./components/Agent/Auth/agent_signup";
+import { AdminLayout } from "./components/layout/AgentLayout";
+import AdminDashboard from "./components/Agent/Pages/agent_dashboard";
 
 
 
@@ -38,9 +40,9 @@ function App() {
     
       {/* <Route element={<ProtectedRoute />}> */}
        {/* Admin Routes */}
-        {/* <Route path="/admin" element={<AdminLayout />}> */}
-          {/* <Route index element={<Admindashboard />} />
-          <Route path="products" element={<AdminProducts />} />
+        <Route path="/admin" element={<AdminLayout />}>
+           <Route index element={<AdminDashboard />} />
+          {/*<Route path="products" element={<AdminProducts />} />
           <Route path="categories" element={<AdminCategories />} />
           <Route path="orders" element={<AdminOrders />} />
           <Route path="users" element={<AdminUsers />} />
@@ -53,7 +55,7 @@ function App() {
           <Route path="settings" element={<AdminSettings />} /> */}
         {/* </Route> */}
 
-    {/* </Route> */}
+    </Route>
 
       </Routes>
    

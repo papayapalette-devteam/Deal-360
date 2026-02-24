@@ -1,79 +1,89 @@
-import { Bell, Search, User, Menu } from "lucide-react";
-import { Button } from "../../UI//button";
-import { Input } from "../../UI//input";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "../../UI/dropdown-menu";
-import { Avatar, AvatarFallback } from "../../UI//avatar";
+import { Bell, User, Menu, Sun, Moon } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Button } from "../../UI/button";
+import { Avatar, AvatarFallback } from "../../UI/avatar";
 
 export function Adminheader({ onMenuClick }) {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.documentElement.classList.toggle("dark", newTheme === "dark");
+  };
+
   return (
-    <header className="h-14 md:h-16 border-b border-border bg-card px-4 md:px-6 flex items-center justify-between gap-2">
-      <div className="flex items-center gap-2 flex-1">
+    <header className="min-h-[50px]  bg-card px-4 md:px-6 flex items-center justify-between">
+      
+      {/* LEFT SECTION */}
+      <div className="flex items-start gap-3">
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className="md:hidden mt-1"
           onClick={onMenuClick}
         >
           <Menu className="h-5 w-5" />
         </Button>
 
-<div className="relative flex-1 max-w-md hidden sm:block">
-  {/* Search Icon */}
-  <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" />
-
-  {/* Input */}
-  <Input
-    type="text"
-    // placeholder="Search..."
-    className="pl-8"
-  />
-</div>
-
+        <div>
+<h1 className="font-manrope text-[24px] font-[700] leading-[150%] text-[var(--Secondary-Color,#181818)] mt-4">
+  Welcome Back, Natasha
+</h1>
+          <p className="text-sm text-muted-foreground">
+            Here’s what's happening with your real estate today
+          </p>
+        </div>
       </div>
 
-      <div className="flex items-center gap-2 md:gap-3">
-        <Button variant="ghost" size="icon" className="relative">
-          <Bell className="h-5 w-5" />
-          <span className="absolute top-1 right-1 w-2 h-2 bg-destructive rounded-full" />
-        </Button>
+      {/* RIGHT SECTION */}
+      <div className="flex items-center gap-3">
 
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="flex items-center gap-2 px-2">
-              <Avatar className="h-8 w-8">
-                <AvatarFallback className="bg-primary text-primary-foreground text-sm">
-                  AD
-                </AvatarFallback>
-              </Avatar>
-              <span className="text-sm font-medium hidden sm:inline">
-                Admin
-              </span>
-            </Button>
-          </DropdownMenuTrigger>
+        {/* Dark / Light Toggle */}
 
-          <DropdownMenuContent align="end" className="w-48">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
 
-            <DropdownMenuItem>
-              <User className="h-4 w-4 mr-2" />
-              Profile
-            </DropdownMenuItem>
+<div className="inline-flex p-1 rounded-[16px] bg-[linear-gradient(90deg,#E8E8E8_0%,#E5E5E5_100%)]">
 
-            <DropdownMenuSeparator />
+  {/* Light Button */}
+  <button
+    onClick={() => setTheme("light")}
+    className={`flex items-center gap-2 px-4 py-2 rounded-[12px] text-sm font-semibold transition-all duration-200
+      ${
+        theme === "light"
+          ? "bg-[linear-gradient(180deg,#BAFFE8_0%,#B7FFE7_100%)] shadow-sm"
+          : "bg-transparent"
+      }
+    `}
+  >
+    <Sun className="h-4 w-4" />
+    Light
+  </button>
 
-            <DropdownMenuItem className="text-destructive">
-              Logout
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+  {/* Dark Button */}
+  <button
+    onClick={() => setTheme("dark")}
+    className={`flex items-center gap-2 px-4 py-2 rounded-[12px] text-sm font-semibold transition-all duration-200
+      ${
+        theme === "dark"
+          ? "bg-[linear-gradient(180deg,#BAFFE8_0%,#B7FFE7_100%)] shadow-sm"
+          : "bg-transparent"
+      }
+    `}
+  >
+    <Moon className="h-4 w-4" />
+    Dark
+  </button>
+
+</div>
+
+
       </div>
     </header>
   );

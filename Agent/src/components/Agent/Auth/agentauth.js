@@ -97,7 +97,7 @@ export default function AgentSignIn() {
                   </div>
 
                   {/* Action buttons */}
-                  <div className="flex gap-2">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <button
                       type="button"
                       className="btn-primary flex-1"
