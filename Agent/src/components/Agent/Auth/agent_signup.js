@@ -35,7 +35,9 @@ export default function AgentSignup() {
            
               {/* Tab row */}
 <div className="flex flex-col gap-4">
-  <p className="font-medium">I am a..</p>
+  <p className="font-medium text-[var(--Colors-for-white-theme-Secondary-text,#565656)]">
+  I am a..
+</p>
 
   <div className="grid grid-cols-2 gap-3">
     
