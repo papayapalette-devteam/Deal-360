@@ -12,6 +12,9 @@ import ProfessionSignIn from "./components/Agent/Auth/profession_auth";
 import ForgetPassword from "./components/Agent/Auth/forget_password";
 import VerifyOTP from "./components/Agent/Auth/verify_otp";
 import ChangePassword from "./components/Agent/Auth/change_passowrd";
+import UserSingup from "./components/Agent/Auth/user_signup";
+import BrokerageSignup from "./components/Agent/Auth/brokerage_signup";
+import AgentSignup from "./components/Agent/Auth/agent_signup";
 
 
 
@@ -29,6 +32,9 @@ function App() {
          <Route path="/forget-password" element={<ForgetPassword/>}></Route>
          <Route path="/verify-otp" element={<VerifyOTP/>}></Route>
          <Route path="/change-password" element={<ChangePassword/>}></Route>
+         <Route path="/user-signup" element={<UserSingup/>}></Route>
+         <Route path="/brokerage-signup" element={<BrokerageSignup/>}></Route>
+         <Route path="/agent-signup" element={<AgentSignup/>}></Route>
     
       {/* <Route element={<ProtectedRoute />}> */}
        {/* Admin Routes */}

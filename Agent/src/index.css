@@ -12,6 +12,9 @@
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 
+     --Colors-for-white-theme-Secondary: #F88379;
+
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
@@ -39,9 +42,18 @@
     /* Brand */
     --brand-primary: 160 100% 75%;
     --brand-secondary: 4 91% 72%;
+    --brand-secondary1: #FFECEA;
     --brand-grey-label: 0 0% 38%;
     --brand-grey-placeholder: 208 7% 46%;
     --brand-neutral: 136 4% 43%;
+
+
+    --brand-white: 210 17% 98%;
+    --brand-dark: 210 10% 23%;
+    --brand-grey: 208 7% 46%;
+
+    --brand-grey-300: 0 0% 38%;
+    --brand-mint-light: 151 89% 96%;
   }
 }
 html, body, #root {
@@ -108,3 +120,8 @@ html, body, #root {
     @apply opacity-80;
   }
 }
+
+
+
+
+
