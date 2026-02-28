@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+
+/* =========================
+   THEME VARIABLES
+========================= */
+
+:root {
+  /* Colors - Light Theme */
+  --color-bg: #ffffff;
+  --color-text: #4B4B4B;
+  --color-text-secondary: #686868;
+  --color-muted: #686868;
+  --color-primary: #F88379;
+}
+
+.dark {
+  /* Colors - Dark Theme */
+  --color-bg: #111111;
+  --color-text: #ffffff;
+  --color-muted: #cfcfcf;
+  --color-primary: #F88379;
+}
+
+/* =========================
+   GLOBAL BASE
+========================= */
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Poppins";
+}
+
+
+/* =========================
+   CUSTOM UTILITY CLASSES
+========================= */
+
+.bg-theme {
+  background-color: var(--color-bg);
+}
+
+.text-theme {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
