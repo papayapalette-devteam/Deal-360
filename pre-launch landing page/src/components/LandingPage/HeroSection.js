@@ -94,7 +94,7 @@ export default function HeroSection() {
                 {buttons.map((label) => (
                   <button
                     key={label}
-                    className="px-5 py-4 rounded-lg border-4 border-[#79FFD2] text-[var(--color-text)] font-medium text-sm sm:text-base leading-[110%] bg-gradient-to-r from-[#E8FFF7] via-[#FFF3F2] to-[#D5FFF1] hover:opacity-90 transition-opacity whitespace-nowrap"
+                    className="px-6 py-4 rounded-lg border-4 border-[#79FFD2] text-[var(--color-text)] font-medium text-sm sm:text-base leading-[110%] bg-gradient-to-r from-[#E8FFF7] via-[#FFF3F2] to-[#D5FFF1] hover:opacity-90 transition-opacity whitespace-nowrap"
                   >
                     {label}
                   </button>

@@ -12,6 +12,8 @@
   --color-text-secondary: #686868;
   --color-muted: #686868;
   --color-primary: #F88379;
+   --base-black: #343A40;
+  --grey-base: #6C757D;
 }
 
 .dark {

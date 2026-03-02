@@ -1,4 +1,12 @@
+"use client";
+
+import { useState } from "react";
+import RegistrationModal from "../RegistrationModal/RegistrationModal";
+
 export default function AgentPricingSection() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const plans = [
         {
             name: "Agent Lite",
@@ -253,7 +261,7 @@ export default function AgentPricingSection() {
                                     <span className="text-xs text-[#4B5563] self-stretch">
                                         Annual options available
                                     </span>
-                                    <button className="w-full py-4 rounded-lg bg-[#7FFFD4] text-[#4B4B4B] font-medium hover:opacity-90 transition mt-4">
+                                    <button onClick={() => setIsModalOpen(true)} className=" cursor-pointer w-full py-4 rounded-lg bg-[#7FFFD4] text-[#4B4B4B] font-medium hover:opacity-90 transition mt-4">
                                         Register Early
                                     </button>
                                 </div>
@@ -261,6 +269,11 @@ export default function AgentPricingSection() {
                         </div>
                     ))}
                 </div>
+
+                      <RegistrationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
             </div>
         </div>
     );

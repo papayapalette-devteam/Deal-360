@@ -90,8 +90,20 @@ export default function ForBrockerage() {
 
   <div className="flex items-center gap-3">
     <div className="w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-[#F883791A] flex items-center justify-center flex-shrink-0">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M18.0008 15.8369C19.4567 16.5683 20.7049 17.742 21.6161 19.2096C21.7965 19.5003 21.8867 19.6456 21.9179 19.8468C21.9813 20.2558 21.7016 20.7585 21.3207 20.9204C21.1333 21 20.9225 21 20.5008 21M16.0008 11.5322C17.4825 10.7959 18.5008 9.26686 18.5008 7.5C18.5008 5.73314 17.4825 4.20411 16.0008 3.46776M14.0008 7.5C14.0008 9.98528 11.9861 12 9.50081 12C7.01553 12 5.00081 9.98528 5.00081 7.5C5.00081 5.01472 7.01553 3 9.50081 3C11.9861 3 14.0008 5.01472 14.0008 7.5ZM2.56004 18.9383C4.15435 16.5446 6.67019 15 9.50081 15C12.3314 15 14.8473 16.5446 16.4416 18.9383C16.7909 19.4628 16.9655 19.725 16.9454 20.0599C16.9297 20.3207 16.7588 20.64 16.5504 20.7976C16.2827 21 15.9146 21 15.1785 21H3.82317C3.08698 21 2.71889 21 2.45125 20.7976C2.24286 20.64 2.0719 20.3207 2.05625 20.0599C2.03614 19.725 2.21078 19.4628 2.56004 18.9383Z" stroke="#4B4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <path
+    d="M18.0008 15.8369C19.4567 16.5683 20.7049 17.742 21.6161 19.2096C21.7965 19.5003 21.8867 19.6456 21.9179 19.8468C21.9813 20.2558 21.7016 20.7585 21.3207 20.9204C21.1333 21 20.9225 21 20.5008 21M16.0008 11.5322C17.4825 10.7959 18.5008 9.26686 18.5008 7.5C18.5008 5.73314 17.4825 4.20411 16.0008 3.46776M14.0008 7.5C14.0008 9.98528 11.9861 12 9.50081 12C7.01553 12 5.00081 9.98528 5.00081 7.5C5.00081 5.01472 7.01553 3 9.50081 3C11.9861 3 14.0008 5.01472 14.0008 7.5ZM2.56004 18.9383C4.15435 16.5446 6.67019 15 9.50081 15C12.3314 15 14.8473 16.5446 16.4416 18.9383C16.7909 19.4628 16.9655 19.725 16.9454 20.0599C16.9297 20.3207 16.7588 20.64 16.5504 20.7976C16.2827 21 15.9146 21 15.1785 21H3.82317C3.08698 21 2.71889 21 2.45125 20.7976C2.24286 20.64 2.0719 20.3207 2.05625 20.0599C2.03614 19.725 2.21078 19.4628 2.56004 18.9383Z"
+    stroke="#4B4B4B"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
 </svg>
     </div>
    <span className="text-[var(--color-text)] sm:text-lg text-[var(--Colors-for-white-theme-Secondary-text,#565656)] font-medium">
@@ -104,11 +116,45 @@ export default function ForBrockerage() {
 
  <div className="flex items-center gap-3">
     <div className="w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-[#F883791A] flex items-center justify-center flex-shrink-0">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M17.9707 22H22.0007" stroke="#4B4B4B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M2 2V19C2 20.66 3.34 22 5 22H13.98" stroke="#4B4B4B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M19.9902 8.17999L21.0002 7" stroke="#4B4B4B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M5 17.0031L9.59 11.6432C10.35 10.7632 11.7 10.7031 12.52 11.5331L13.47 12.4832C14.29 13.3032 15.64 13.2531 16.4 12.3731L17.55 11.0231" stroke="#4B4B4B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <path
+    d="M17.9707 22H22.0007"
+    stroke="#4B4B4B"
+    strokeWidth="1.5"
+    strokeMiterlimit="10"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M2 2V19C2 20.66 3.34 22 5 22H13.98"
+    stroke="#4B4B4B"
+    strokeWidth="1.5"
+    strokeMiterlimit="10"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M19.9902 8.17999L21.0002 7"
+    stroke="#4B4B4B"
+    strokeWidth="1.5"
+    strokeMiterlimit="10"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M5 17.0031L9.59 11.6432C10.35 10.7632 11.7 10.7031 12.52 11.5331L13.47 12.4832C14.29 13.3032 15.64 13.2531 16.4 12.3731L17.55 11.0231"
+    stroke="#4B4B4B"
+    strokeWidth="1.5"
+    strokeMiterlimit="10"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
 </svg>
     </div>
    <span className="text-[var(--color-text)] sm:text-lg text-[var(--Colors-for-white-theme-Secondary-text,#565656)] font-medium">
@@ -140,8 +186,20 @@ export default function ForBrockerage() {
 
    <div className="flex items-center gap-3">
     <div className="w-12 h-12 min-w-[48px] min-h-[48px] rounded-full bg-[#F883791A] flex items-center justify-center flex-shrink-0">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M20 6L9 17L4 12" stroke="#4B4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <path
+    d="M20 6L9 17L4 12"
+    stroke="#4B4B4B"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
 </svg>
     </div>
    <span className="text-[var(--color-text)] sm:text-lg text-[var(--Colors-for-white-theme-Secondary-text,#565656)] font-medium">

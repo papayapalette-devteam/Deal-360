@@ -1,4 +1,10 @@
+"use client";
+
+import { useState } from "react";
+import RegistrationModal from "../RegistrationModal/RegistrationModal";
+
 export default function BrokeragePricingSection() {
+      const [isModalOpen, setIsModalOpen] = useState(false);
     const plans = [
         {
             name: "Brokerage Lite",
@@ -59,7 +65,7 @@ export default function BrokeragePricingSection() {
             ],
         },
         {
-            name: "Brokerage Pro",
+            name: "Enterprise",
             freeLabel: null,
             description:
                 "Maximum scale for multi-office ",
@@ -238,7 +244,7 @@ export default function BrokeragePricingSection() {
                                     <span className="text-xs text-[#4B5563] self-stretch">
                                         Annual options available
                                     </span>
-                                    <button className="w-full py-4 rounded-lg bg-[#7FFFD4] text-[#4B4B4B] font-medium hover:opacity-90 transition mt-4">
+                                    <button onClick={() => setIsModalOpen(true)} className="w-full py-4 cursor-pointer rounded-lg bg-[#7FFFD4] text-[#4B4B4B] font-medium hover:opacity-90 transition mt-4">
                                         Register Early
                                     </button>
                                 </div>
@@ -246,6 +252,11 @@ export default function BrokeragePricingSection() {
                         </div>
                     ))}
                 </div>
+
+                                    <RegistrationModal
+                        isOpen={isModalOpen}
+                        onClose={() => setIsModalOpen(false)}
+                      />
             </div>
         </div>
     );

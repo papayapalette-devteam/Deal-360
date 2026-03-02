@@ -62,8 +62,20 @@ export default function BuySellControll() {
   {/* 1️⃣ Verified Client */}
   <div className="flex items-center gap-3">
     <div className="w-10 h-10 rounded-full bg-[#7FFFD41A] flex items-center justify-center">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M20 6L9 17L4 12" stroke="#7FFFD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <path
+    d="M20 6L9 17L4 12"
+    stroke="#7FFFD4"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
 </svg>
     </div>
     <span className="text-[var(--color-text)] sm:text-lg text-[#4B4B4B] font-medium">
@@ -74,8 +86,20 @@ export default function BuySellControll() {
   {/* 2️⃣ Checked Listings */}
   <div className="flex items-center gap-3">
     <div className="w-10 h-10 rounded-full bg-[#7FFFD41A] flex items-center justify-center">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M20 6L9 17L4 12" stroke="#7FFFD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <path
+    d="M20 6L9 17L4 12"
+    stroke="#7FFFD4"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
 </svg>
     </div>
     <span className="text-[var(--color-text)] sm:text-lg text-[#4B4B4B] font-medium">
@@ -86,8 +110,20 @@ export default function BuySellControll() {
   {/* 3️⃣ Transparent Pricing */}
   <div className="flex items-center gap-3">
     <div className="w-10 h-10 rounded-full bg-[#7FFFD41A] flex items-center justify-center">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M20 6L9 17L4 12" stroke="#7FFFD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <path
+    d="M20 6L9 17L4 12"
+    stroke="#7FFFD4"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
 </svg>
     </div>
     <span className="text-[var(--color-text)] sm:text-lg text-[#4B4B4B] font-medium">
@@ -97,8 +133,20 @@ export default function BuySellControll() {
 
     <div className="flex items-center gap-3">
     <div className="w-10 h-10 rounded-full bg-[#7FFFD41A] flex items-center justify-center">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M20 6L9 17L4 12" stroke="#7FFFD4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+>
+  <path
+    d="M20 6L9 17L4 12"
+    stroke="#7FFFD4"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
 </svg>
     </div>
     <span className="text-[var(--color-text)] sm:text-lg text-[#4B4B4B] font-medium">
