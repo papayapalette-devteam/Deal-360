@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [theme, setTheme] = useState("light");
@@ -14,12 +14,22 @@ export default function Header() {
     "Investor",
   ];
 
+    useEffect(() => {
+    const root = document.documentElement;
+
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [theme]);
+
   return (
     <header
       className="w-full"
       style={{
         background: "rgba(201, 255, 237, 0.40)",
-        boxShadow: "0 2px 4px rgba(0,0,0,0.10)",
+        // boxShadow: "0 2px 4px rgba(0,0,0,0.10)",
       }}
     >
       {/* Top Bar */}
@@ -74,7 +84,7 @@ export default function Header() {
   >
     <button
       onClick={() => setTheme("light")}
-      className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 lg:px-4 py-1.5 md:py-2 rounded-xl text-xs md:text-sm lg:text-base transition-all ${
+      className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 lg:px-4 py-1.5 md:py-2 rounded-xl text-xs md:text-sm lg:text-base transition-all cursor-pointer ${
         theme === "light" ? "bg-[#BAFFE8]" : ""
       }`}
     >
@@ -82,7 +92,7 @@ export default function Header() {
     </button>
     <button
       onClick={() => setTheme("dark")}
-      className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 lg:px-4 py-1.5 md:py-2 rounded-xl text-xs md:text-sm lg:text-base transition-all ${
+      className={`flex items-center gap-1 md:gap-2 px-2 md:px-3 lg:px-4 py-1.5 md:py-2 rounded-xl text-xs md:text-sm lg:text-base transition-all cursor-pointer ${
         theme === "dark" ? "bg-[#BAFFE8]" : ""
       }`}
     >

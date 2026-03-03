@@ -12,10 +12,20 @@ export const metadata = {
   description: "Real Estate Platform",
 };
 
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en" className={poppins.variable}>
+//       <body className="font-sans">
+//         {children}
+//       </body>
+//     </html>
+//   );
+// }
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className="font-sans">
+    <html lang="en" className={`${poppins.variable} light`}>
+      <body className="font-sans bg-theme text-theme transition-colors duration-300">
         {children}
       </body>
     </html>

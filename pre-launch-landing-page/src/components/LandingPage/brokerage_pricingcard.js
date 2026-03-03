@@ -101,7 +101,7 @@ export default function BrokeragePricingSection() {
     );
 
     return (
-        <div className="px-4 md:px-16 xl:px-32 2xl:px-48 py-0 mt-8">
+       <div className="bg-[var(--color-bg)] text-[var(--color-text)] overflow-hidden mt-8">
             <div
                 className="max-w-[100%] mx-auto bg-white rounded-2xl p-10"
                 style={{ boxShadow: "0 0 20px rgba(0,0,0,0.12)" }}

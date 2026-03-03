@@ -23,8 +23,8 @@ import Footer from "@/components/Layout/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-       <main className="w-full min-h-screen bg-white dark:bg-gray-900">
+    <div className="flex min-h-screen items-center justify-center bg-theme text-theme">
+       <main className="w-full min-h-screen bg-theme">
       <Header/>
       <HeroSection/>
       <WhatIsComing/>
@@ -40,8 +40,6 @@ export default function Home() {
       <NotaPortal/>
       <EarlyAccessProgram/>
       <Pricing/>
-      {/* <AgentPricingSection/>
-      <BrokeragePricingSection/> */}
       <PricingGlowWrapper/>
       <Rewards/>
       <RewardsCard/>

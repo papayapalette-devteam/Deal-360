@@ -9,11 +9,7 @@ export default function LaunchingSection() {
     "Partner Registration",
   ];
 
-  const benefits = [
-    "Priority visibility",
-    "Early feature access",
-    "Founding-only benefits",
-  ];
+
 
   return (
   <div className="bg-[var(--color-bg)] text-[var(--color-text)] overflow-hidden">
@@ -119,16 +115,32 @@ export default function LaunchingSection() {
       {/* Mobile phones for small screens */}
       <div className="flex lg:hidden w-full justify-center mt-2 mb-8">
         <div className="relative w-full h-full flex items-center justify-center">
+      {/* Phone images container */}
+        <div className="relative w-full h-full flex items-center justify-center rotate-[-20deg]">
+          {/* Left center phone */}
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/af1e47eed63032038f29431ba0e27c9be486f087?width=479"
             alt="App screenshot"
-            className="absolute w-[180px] xl:w-[210px] 2xl:w-[239px] rounded-2xl shadow-2xl -rotate-[0deg] left-[0%] top-[18%] z-10"
+            className="absolute w-[180px] xl:w-[210px] 2xl:w-[239px] rounded-2xl shadow-2xl -rotate-[0deg] right-[-2%] top-[18%] z-10"
           />
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/067b7eae724b69dde322fd5acb7a5e90544f3f1d?width=459"
-            alt="Property card"
-            className="absolute w-[160px] xl:w-[190px] 2xl:w-[220px] rounded-xl shadow-xl -rotate-[0deg] left-[20%] top-[30%] z-30"
-          />
+
+          {/* Right Side Vertical Phones */}
+          <div>
+            {/* Top Phone */}
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/e5b7590364ee604abf055ae420494e03698afe49?width=479"
+              alt="App screenshot"
+              className="w-[140px] sm:w-[160px] md:w-[180px] xl:w-[210px] 2xl:w-[239px] rounded-2xl shadow-2xl"
+            />
+
+            {/* Bottom Phone */}
+            <img
+              src="https://api.builder.io/api/v1/image/assets/TEMP/8937a22567fe31112fd56bbfd8366aec8bc65fa6?width=479"
+              alt="App screenshot"
+              className="w-[140px] sm:w-[160px] md:w-[180px] xl:w-[210px] 2xl:w-[239px] rounded-2xl shadow-2xl mt-2"
+            />
+          </div>
+        </div>
         </div>
       </div>
 

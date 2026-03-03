@@ -2,19 +2,7 @@
 
 
 export default function Protal() {
-  const buttons = [
-    "Submit Requirement",
-    "Submit Listing Intent",
-    "User Registration",
-    "Professional Registration",
-    "Partner Registration",
-  ];
 
-  const benefits = [
-    "Priority visibility",
-    "Early feature access",
-    "Founding-only benefits",
-  ];
 
   return (
   <div className="bg-[var(--color-bg)] text-[var(--color-text)] overflow-hidden">
@@ -94,11 +82,15 @@ export default function Protal() {
       {/* Mobile phones for small screens */}
       <div className="flex lg:hidden w-full justify-center mt-2 mb-8">
         <div className="relative w-full h-full flex items-center justify-center">
-          <img
-            src="/mobile.png"
-            alt="App screenshot"
-            className="absolute w-[180px] xl:w-[210px] 2xl:w-[239px] rounded-2xl shadow-2xl -rotate-[0deg] left-[0%] top-[18%] z-10"
-          />
+    <img
+      src="/mobile.png" // put mobile.png in public folder
+      alt="App screenshot"
+      className="rounded-2xl shadow-2xl z-10"
+      style={{
+        width: "auto",
+        height: "auto",
+      }}
+    />
         
         </div>
       </div>

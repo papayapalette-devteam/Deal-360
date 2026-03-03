@@ -22,6 +22,9 @@
   --color-text: #ffffff;
   --color-muted: #cfcfcf;
   --color-primary: #F88379;
+  --base-black: #F1F3F5;      /* light grey instead of dark */
+  --grey-base: #ADB5BD;
+  --color-text-secondary: #CFCFCF;
 }
 
 /* =========================

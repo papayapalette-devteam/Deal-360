@@ -20,7 +20,7 @@ export function Adminheader({ onMenuClick }) {
   };
 
   return (
-    <header className="min-h-[50px]  bg-card px-4 md:px-6 flex items-center justify-between">
+    <header className="min-h-[50px] font-sans  bg-card px-4 md:px-6 flex items-center justify-between">
       
       {/* LEFT SECTION */}
       <div className="flex items-start gap-3">
@@ -34,7 +34,7 @@ export function Adminheader({ onMenuClick }) {
         </Button>
 
         <div>
-<h1 className="font-manrope text-[24px] font-[700] leading-[150%] text-[var(--Secondary-Color,#181818)] mt-4">
+<h1 className="font-manrope text-[24px] font-bold leading-[150%] text-[var(--Secondary-Color,#181818)] mt-4">
   Welcome Back, Natasha
 </h1>
           <p className="text-sm text-muted-foreground">

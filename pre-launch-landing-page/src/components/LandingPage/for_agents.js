@@ -12,7 +12,7 @@ export default function ForAgents() {
     <div className="flex flex-col lg:flex-row items-center lg:items-stretch  gap-8 lg:gap-12">
       
       {/* Left Column */}
-      <div className=" flex flex-col justify-center items-start gap-8 lg:gap-12 py-4 md:py-8 lg:py-12 max-w-full lg:max-w-[55%]">
+      <div className="hidden lg:flex flex flex-col justify-center items-start gap-8 lg:gap-12 py-4 md:py-8 lg:py-12 max-w-full lg:max-w-[55%]">
         
          {/* Phone images container */}
   <div className="relative w-full h-full flex items-start justify-start">
@@ -27,25 +27,29 @@ export default function ForAgents() {
       }}
     />
   </div>
-
+     </div>
         {/* Mobile phones for small screens */}
-      <div className="flex lg:hidden w-full justify-center mt-2 mb-8">
-        <div className="relative w-full h-full flex items-center justify-center">
-          <img
-            src="/mobile2.png"
-            alt="App screenshot"
-            className="absolute w-[180px] xl:w-[210px] 2xl:w-[239px] rounded-2xl shadow-2xl -rotate-[0deg] left-[0%] top-[18%] z-10"
-          />
+<div className="flex lg:hidden w-full justify-start mt-2 mb-8">
+        <div className="relative w-full h-full flex items-center justify-start">
+    <img
+      src="/agents.png" // put mobile.png in public folder
+      alt="App screenshot"
+      className="rounded-2xl  z-10"
+      style={{
+        width: "auto",
+        height: "auto",
+      }}
+    />
         
         </div>
       </div>
  
 
      
-      </div>
+ 
 
 
-<div className="hidden lg:flex flex-1 flex-col justify-end items-start gap-8 lg:gap-12 py-4 md:py-8 lg:py-12 max-w-full lg:max-w-[55%]">
+<div className=" lg:flex flex-1 flex-col justify-end items-start gap-8 lg:gap-12 py-4 md:py-8 lg:py-12 max-w-full lg:max-w-[55%]">
   {/* Pill / Launching in Dubai */}
   <div
     className="relative flex items-center gap-2 rounded-full border-4"

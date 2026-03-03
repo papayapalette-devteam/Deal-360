@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import  Adminsidebar  from "./adminsidebar";
 import { Adminheader } from "./adminheader";
 
-export function AdminLayout() {
+export function AgentLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (

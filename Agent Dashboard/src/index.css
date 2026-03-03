@@ -56,6 +56,9 @@
 
     --brand-grey-300: 0 0% 38%;
     --brand-mint-light: 151 89% 96%;
+
+    --text-grey:#68706A;
+    --base-black:#343A40;
   }
 }
 html, body, #root {
@@ -71,8 +74,14 @@ html, body, #root {
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Manrope', sans-serif;
+    /* font-family: "Poppins", sans-serif; */
   }
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
     overflow-wrap: anywhere;

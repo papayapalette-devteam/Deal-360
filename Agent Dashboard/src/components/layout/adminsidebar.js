@@ -77,7 +77,7 @@ function SidebarContent({ onItemClick }) {
             to={item.path}
             onClick={onItemClick}
             className={cn(
-              "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors no-underline",
+              "flex font-sans items-center gap-3 px-3 py-2.5 rounded-lg text-lg font-medium transition-colors no-underline",
               isActive
                 ? "bg-[hsl(var(--brand-secondary))] text-white font-[700]"
                 : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"

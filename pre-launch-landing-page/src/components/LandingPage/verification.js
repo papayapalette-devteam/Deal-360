@@ -147,14 +147,17 @@ export default function Verification() {
   </div>
 </div>
 
-      {/* Mobile phones for small screens */}
-      <div className="flex lg:hidden w-full justify-center mt-2 mb-8">
+  <div className="flex lg:hidden w-full justify-center mt-2 mb-8">
         <div className="relative w-full h-full flex items-center justify-center">
-          <img
-            src="/ZenBook.png"
-            alt="App screenshot"
-            className="absolute w-[180px] xl:w-[210px] 2xl:w-[239px] rounded-2xl shadow-2xl -rotate-[0deg] left-[0%] top-[18%] z-10"
-          />
+    <img
+      src="/ZenBook.png" // put mobile.png in public folder
+      alt="App screenshot"
+      className="rounded-2xl shadow-2xl z-10"
+      style={{
+        width: "auto",
+        height: "auto",
+      }}
+    />
         
         </div>
       </div>
