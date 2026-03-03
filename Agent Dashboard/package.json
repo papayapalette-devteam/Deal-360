@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@fontsource/poppins": "^5.2.7",
     "@mui/icons-material": "^7.3.0",
     "@mui/material": "^7.3.0",
     "@mui/x-data-grid": "^8.10.0",
@@ -43,6 +44,7 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.10.2",
     "react-slick": "^0.30.3",
+    "recharts": "^3.7.0",
     "slick-carousel": "^1.8.1",
     "sweetalert2": "^11.22.2",
     "swiper": "^11.2.10",

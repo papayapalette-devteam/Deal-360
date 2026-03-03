@@ -19,12 +19,18 @@
 .dark {
   /* Colors - Dark Theme */
   --color-bg: #111111;
-  --color-text: #ffffff;
+  /* --color-text: #ffffff;
   --color-muted: #cfcfcf;
   --color-primary: #F88379;
-  --base-black: #F1F3F5;      /* light grey instead of dark */
+  --base-black: #F1F3F5; 
   --grey-base: #ADB5BD;
-  --color-text-secondary: #CFCFCF;
+  --color-text-secondary: #CFCFCF; */
+    --color-text: #4B4B4B;
+  --color-text-secondary: #686868;
+  --color-muted: #686868;
+  --color-primary: #F88379;
+   --base-black: #343A40;
+  --grey-base: #6C757D;
 }
 
 /* =========================
