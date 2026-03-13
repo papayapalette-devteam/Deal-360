@@ -12,8 +12,7 @@ export function Adminheader({ onMenuClick }) {
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+  const changeTheme = (newTheme) => {
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
     document.documentElement.classList.toggle("dark", newTheme === "dark");
@@ -53,7 +52,7 @@ export function Adminheader({ onMenuClick }) {
 
   {/* Light Button */}
   <button
-    onClick={() => setTheme("light")}
+    onClick={() => changeTheme("light")}
     className={`flex items-center gap-2 px-4 py-2 rounded-[12px] text-sm font-semibold transition-all duration-200
       ${
         theme === "light"
@@ -68,7 +67,7 @@ export function Adminheader({ onMenuClick }) {
 
   {/* Dark Button */}
   <button
-    onClick={() => setTheme("dark")}
+    onClick={() => changeTheme("dark")}
     className={`flex items-center gap-2 px-4 py-2 rounded-[12px] text-sm font-semibold transition-all duration-200
       ${
         theme === "dark"

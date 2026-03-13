@@ -1,16 +1,6 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Home, TrendingUp, RefreshCcw, Search } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../../UI/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "../../../UI/table";
-import { Badge } from "../../../UI/badge";
-import { Button } from "../../../UI/button";
+
 import {
     LineChart,
     Line,
@@ -78,8 +68,11 @@ import {
 
 
 
-
 export default function AdminDashboard() {
+
+  
+const navigate =useNavigate()
+
   return (
     <div className="space-y-6">
 
@@ -96,7 +89,7 @@ export default function AdminDashboard() {
 
 
             <div>
-              <h2 className="font-sans font-semibold text-2xl leading-[120%] tracking-normal">
+              <h2  className="font-sans font-semibold text-2xl leading-[120%] tracking-normal">
                 Account Verification Required
               </h2>
               <p className="font-poppins font-normal text-[16px] leading-[120%] tracking-normal text-[var(--text-grey,#6C757D)]">
@@ -108,6 +101,7 @@ export default function AdminDashboard() {
         </div>
         <div className="pl-0 sm:pl-7 pt-4 sm:pt-0">
           <button
+          onClick={(()=>navigate("verification"))}
             style={{ border: "2px solid #F88379" }}
             className="flex items-center gap-2 
                px-3 py-3 
@@ -128,7 +122,7 @@ export default function AdminDashboard() {
       </div>
 
 {/* states */}
-<button
+<button onClick={(()=>navigate("add-new-listing"))}
   className="flex items-center justify-center 
              px-[15px] pr-[15.594px] py-[10px] 
              mt-4

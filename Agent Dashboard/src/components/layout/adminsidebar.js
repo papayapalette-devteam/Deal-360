@@ -35,16 +35,16 @@ import logout from "../../assets/images/log-out.png"
 
 const menuItems = [
   { title: "Dashboard Overview", icon: LayoutDashboard, path: "/admin" },
-  { title: "Public Agent Profile", icon: publicagent,type: "image", path: "/admin/products" },
+  { title: "Public Agent Profile", icon: publicagent,type: "image", path: "/admin/agent-profile" },
   { title: "Property Manager", icon: propertymanager,type: "image", path: "/admin/categories" },
-  { title: "Listings", icon: listings,type: "image", path: "/admin/orders" },
-  { title: "Requirements", icon: requirment, type: "image", path: "/admin/users" },
+  { title: "Listings", icon: listings,type: "image", path: "/admin/listings" },
+  { title: "Requirements", icon: requirment, type: "image", path: "/admin/requirments" },
   { title: "Listing Intent", icon: listingintent,type: "image", path: "/admin/banners" },
-  { title: "Leads", icon: leads,type: "image", path: "/admin/offers" },
-  { title: "Messages", icon: message,type: "image", path: "/admin/popular" },
-  { title: "Subscription", icon: subscription,type: "image", path: "/admin/essentials" },
-  { title: "Calendar", icon: calender,type: "image", path: "/admin/delivery-settings" },
-  { title: "Notifications", icon: notification,type: "image", path: "/admin/delivery-staff" },
+  { title: "Leads", icon: leads,type: "image", path: "/admin/leads" },
+  { title: "Messages", icon: message,type: "image", path: "/admin/messages" },
+  { title: "Subscription", icon: subscription,type: "image", path: "/admin/subscription" },
+  { title: "Calendar", icon: calender,type: "image", path: "/admin/calender" },
+  { title: "Notifications", icon: notification,type: "image", path: "/admin/notification" },
   { title: "Settings", icon: settings,type: "image", path: "/admin/settings" },
   { title: "Logout", icon: logout,type: "image", path: "/admin/logout" },
 ];
@@ -77,7 +77,7 @@ function SidebarContent({ onItemClick }) {
             to={item.path}
             onClick={onItemClick}
             className={cn(
-              "flex font-sans items-center gap-3 px-3 py-2.5 rounded-lg text-lg font-medium transition-colors no-underline",
+              "flex font-sans items-center gap-3 px-3 py-2.5 sm:text-[16px] 2xl:text-lg rounded-lg text-lg font-medium transition-colors no-underline",
               isActive
                 ? "bg-[hsl(var(--brand-secondary))] text-white font-[700]"
                 : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
@@ -205,7 +205,7 @@ export default function Adminsidebar({ open, onOpenChange }) {
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="hidden md:flex w-60 lg:w-72 xl:w-80 2xl:w-96 min-h-screen bg-card flex-col">
+      <aside className="hidden md:flex w-60 lg:w-72 xl:w-80 2xl:w-[381px] min-h-screen bg-card flex-col">
         <SidebarContent />
       </aside>
 
