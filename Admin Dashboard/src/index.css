@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────── Root Theme ───────────── */
+
+@layer base {
+:root {
+  --radius: 0.5rem;
+
+  /* Core Colors */
+  --background: 210 17% 98%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: 160 100% 75%;
+  --primary-foreground: 0 0% 0%;
+
+  --secondary: 4 91% 72%;
+  --secondary-foreground: 0 0% 0%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 0 0% 38%;
+  --input: 0 0% 38%;
+  --ring: 160 100% 75%;
+
+  /* Brand */
+  --brand-primary: 160 100% 75%;
+  --brand-secondary: 4 91% 72%;
+  --brand-secondary-light: #FFECEA;
+
+  --brand-white: #FFFFFF;
+  --brand-dark: #343A40;
+
+  --brand-dark-secondary: #181818;
+  --brand-grey-secondary: #424242;
+
+  --brand-grey: #68706A;
+  --gray-text: #616161;
+  --gray-text-secondary: #4A5565;
+  --brand-grey-light: #999999;
+  --brand-grey-placeholder: #A5A5A5;
+
+  --secondary-text:#101828;
+  --base-secondary-text:#0A0A0A;
+  --secondary-text1:#565656;
+  --gray-text:#6C757D;
+
+  --brand-mint-light: #DBFFF3;
+
+  /* ── Form Theme (Light) ── */
+
+  --form-bg: #F8F9FA;
+  --form-text: #4B4B4B;
+  --form-text-black: #000000;
+
+  --form-border: #CAD5E2;
+  --form-input-bg: #FFFFFF;
+  --form-section-bg: #F1F5F9;
+
+  --form-selected-bg: #FFDEDB;
+  --form-selected-border: #FFC1BC;
+
+  --form-primary: #F88379;
+  --form-primary-foreground: #F8F9FA;
+  --form-secondary: #7FFFD4;
+
+  --form-placeholder: #A5A5A5;
+  --form-placeholder-light: #C7C7C7;
+
+  --form-checkbox-bg: #DFFFF4;
+  --form-checkbox-border: #000000;
+
+  --form-back-btn-bg: #D7D7D7;
+  --form-back-btn-text: #000000;
+
+  --form-icon: #4B4B4B;
+  
+  
+}
+
+
+
+/* ───────────── Dark Mode ───────────── */
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+
+  /* Form Dark Theme */
+
+  --form-bg: #1a2233;
+  --form-text: #c8d4e0;
+  --form-text-black: #e8eaf0;
+
+  --form-border: #2e4060;
+  --form-input-bg: #111827;
+  --form-section-bg: #1e2d42;
+
+  --form-selected-bg: #3d1a1a;
+  --form-selected-border: #8b3030;
+
+  --form-placeholder: #5a6e84;
+  --form-placeholder-light: #4a5e74;
+
+  --form-checkbox-bg: #0d2a1f;
+  --form-checkbox-border: #7FFFD4;
+
+  --form-back-btn-bg: #2a3a50;
+  --form-back-btn-text: #c8d4e0;
+
+  --form-icon: #c8d4e0;
+}
+
+/* ───────────── Base Styles ───────────── */
+
+html, body, #root {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground font-sans;
+}
+
+:where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+}
+
+/* ───────────── Components ───────────── */
+
+@layer components {
+
+/* Inputs */
+
+.form-input {
+  @apply w-full h-12 px-3 py-2 rounded border border-[#616161] bg-white
+  text-base font-normal text-[#6C757D] placeholder-[#6C757D]
+  outline-none transition-colors duration-200;
+
+  font-family: 'Manrope', sans-serif;
+}
+
+/* Buttons */
+
+.btn-primary {
+  @apply flex items-center justify-center gap-2 px-8 py-4 rounded-lg
+  bg-[#7FFFD4] text-black font-medium text-base
+  transition-opacity duration-200;
+
+  font-family: 'Manrope', sans-serif;
+}
+
+.btn-primary:hover {
+  @apply opacity-90;
+}
+
+.btn-secondary {
+  @apply flex items-center justify-center gap-2 px-8 py-4 rounded-lg
+  bg-[#F88379] text-black font-medium text-base
+  transition-opacity duration-200;
+
+  font-family: 'Manrope', sans-serif;
+}
+
+.btn-secondary:hover {
+  @apply opacity-90;
+}
+
+.btn-outline {
+  @apply flex items-center justify-center gap-2 px-8 py-4 rounded-lg
+  border-2 border-[#7FFFD4] bg-white text-black
+  font-medium text-base shadow transition-opacity duration-200;
+
+  font-family: 'Manrope', sans-serif;
+}
+
+.btn-outline:hover {
+  @apply opacity-80;
+}
+
+}
