@@ -15,6 +15,7 @@
      --Colors-for-white-theme-Secondary: #F88379;
      --Colors-for-white-theme-White: #FFFFFF;
      --Colors-for-white-theme-Gray-Text: #999999;
+     --Secondary-Color: #181818;
 
 
     --popover: 0 0% 100%;
@@ -45,17 +46,9 @@
     --brand-primary: 160 100% 75%;
     --brand-secondary: 4 91% 72%;
     --brand-secondary1: #FFECEA;
-    --brand-grey-label: 0 0% 38%;
-    --brand-grey-placeholder: 208 7% 46%;
     --brand-neutral: 136 4% 43%;
 
 
-    --brand-white: 210 17% 98%;
-    --brand-dark: 210 10% 23%;
-    --brand-grey: 208 7% 46%;
-
-    --brand-grey-300: 0 0% 38%;
-    /* --brand-mint-light: 151 89% 96%; */
     --brand-mint-light: #DBFFF3;
 
     --text-grey:#68706A;
@@ -86,63 +79,65 @@
   }
 }
 
- .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 3%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 3%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 160 100% 75%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 4 91% 72%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 160 100% 75%;
+
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 160 100% 75%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 160 100% 75%;
+    --Secondary-Color: #ffffff;
 
     /* ── Form theme variables (dark) ── */
-    --form-bg: #1a2233;
-    --form-text: #c8d4e0;
-    --form-text-black: #e8eaf0;
-    --form-border: #2e4060;
-    --form-input-bg: #111827;
-    --form-section-bg: #1e2d42;
-    --form-selected-bg: #3d1a1a;
-    --form-selected-border: #8b3030;
+    --form-bg: #000000;
+    --form-text: rgba(255, 255, 255, 0.7);
+    --form-text-black: #ffffff;
+    --form-border: #333333;
+    --form-input-bg: #0a0a0a;
+    --form-section-bg: #111111;
+    --form-selected-bg: #222222;
+    --form-selected-border: #444444;
     --form-primary: #F88379;
-    --form-primary-foreground: #F8F9FA;
+    --form-primary-foreground: #ffffff;
     --form-secondary: #7FFFD4;
-    --form-placeholder: #5a6e84;
-    --form-placeholder-light: #4a5e74;
-    --form-checkbox-bg: #0d2a1f;
+    --form-placeholder: #666666;
+    --form-placeholder-light: #444444;
+    --form-checkbox-bg: #111111;
     --form-checkbox-border: #7FFFD4;
     --form-alert-text: #F88379;
-    --form-back-btn-bg: #2a3a50;
-    --form-back-btn-text: #c8d4e0;
-    --form-icon: #c8d4e0;
+    --form-back-btn-bg: #333333;
+    --form-back-btn-text: #ffffff;
+    --form-icon: #ffffff;
   }
 
 
@@ -150,7 +145,14 @@ html, body, #root {
   height: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  font-family: "Poppins" !important
+  font-family: "Poppins" !important;
+  /* Smoother fluid typography scaling from 1920px down */
+  font-size: clamp(14px, 0.45vw + 0.6rem, 18px);
+}
+
+/* Utility class for responsive images */
+.responsive-img {
+  @apply max-w-full h-auto;
 }
 
 @layer base {
