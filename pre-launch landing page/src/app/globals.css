@@ -1,83 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
 
 
-/* =========================
-   THEME VARIABLES
-========================= */
+/* shadcn/ui theme variables (required by Tailwind config and UI components) */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
 
-:root {
-  /* Colors - Light Theme */
-  --color-bg: #EDEEF0;
+      --color-bg: #EDEEF0;
   --color-text: #4B4B4B;
   --color-text-secondary: #686868;
   --color-muted: #686868;
   --color-primary: #F88379;
    --base-black: #343A40;
   --grey-base: #6C757D;
+  }
+  .dark,
+  [data-theme="dark"] {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
 
-.dark {
-  /* Colors - Dark Theme */
-  --color-bg: #111111;
-  /* --color-text: #ffffff;
-  --color-muted: #cfcfcf;
-  --color-primary: #F88379;
-  --base-black: #F1F3F5; 
-  --grey-base: #ADB5BD;
-  --color-text-secondary: #CFCFCF; */
-    --color-text: #4B4B4B;
-  --color-text-secondary: #686868;
-  --color-muted: #686868;
-  --color-primary: #F88379;
-   --base-black: #343A40;
-  --grey-base: #6C757D;
+/* Light defaults */
+html,
+body {
+  height: 100%;
+    margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Poppins",
 }
 
-/* =========================
-   GLOBAL BASE
-========================= */
+
 
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  font-family: "Poppins";
+  background: #ffffff;
+  color: #111111;
 }
 
-
-/* =========================
-   CUSTOM UTILITY CLASSES
-========================= */
-
-.bg-theme {
-  background-color: var(--color-bg);
+/* Dark mode */
+html[data-theme="dark"] body,
+html.dark body {
+  background: #0F1419 !important;
+  color: #f0f0f0 !important;
 }
 
-.text-theme {
-  color: var(--color-text);
-}
-
-.text-muted {
-  color: var(--color-muted);
-}
-
-.text-primary {
-  color: var(--color-primary);
+/* Pre-launch form pages: banner uses dark background in dark mode */
+html[data-theme="dark"] .prelaunch-banner,
+html.dark .prelaunch-banner {
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 
 
+/* html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; 
+} */
 
 
+html {
+  /* scroll-behavior: smooth; */
+  scroll-padding-top: 45px; 
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: 40px;
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+  html {
+     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+  }
+}
+
+/* Desktop large */
+@media (min-width: 1280px) {
+  html {
+     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+}
 
 
+/* Hide scrollbar but keep scroll working */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
+/* Hero Slider Pagination */
+.hero-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(75, 75, 75, 0.35);
+  opacity: 1;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  margin: 0 4px !important;
+}
 
+.hero-pagination .swiper-pagination-bullet-active {
+  width: 32px;
+  background: var(--color-primary) !important;
+}
 
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
 
-
-
-
-  
-
-  
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}

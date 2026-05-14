@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import TabSwitcher from "../Ui/TabSwitcher";
-import ProfessionalForm from "../RegistrationFroms/ProfissinalForm";
-import UserForm from "../RegistrationFroms/UserForm";
-import PartnerForm from "../RegistrationFroms/PartnerForm";
+import ProfessionalForm from "../registration-forms/ProfessionalForm";
+import UserForm from "../registration-forms/UserForm";
+import PartnerForm from "../registration-forms/CompanyForm";
 
 const tabs = [
   { id: "professional", label: "Professional" },

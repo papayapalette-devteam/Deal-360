@@ -28,7 +28,7 @@ const DESKTOP_BULLETS2 = [
   "Structured Listing Intent",
   "Agent proposal comparison",
   "Controlled exposure",
-  " Built for serious sellers and landlords"
+  "Built for serious sellers and landlords"
 ];
 
 const MOBILE_BULLETS = [
@@ -283,7 +283,7 @@ function Slide({
         </div>
 
         {/* ── Right image column ── */}
-        <div className="relative flex-1 min-h-[600px]">
+        <div className="relative flex-1 min-h-[600px] flex items-center justify-center overflow-hidden">
           {/* Background: keys / hand image */}
           <img
             style={{ borderTopLeftRadius: "50px" }}
@@ -299,7 +299,7 @@ function Slide({
             style={{
               left: `${desktopPhoneImage === "/smartfilteroverlap2.png" ? "-35%" : "-20%"}`,
               top: "15%",
-              height: "90%",
+              height: "95%",
               width: "auto",
               zIndex: 9999,
             }}
@@ -354,31 +354,56 @@ function Slide({
 
             
 
+            {/* Portfolio label for Slide 3 */}
+            {mobilePhoneImage === "/smartfilteroverlap3.png" && (
+              <p
+                className="font-poppins font-medium mb-6"
+                style={{
+                  fontSize: "14px",
+                  color: "var(--color-text)",
+                }}
+              >
+                Total Portfolio Control
+              </p>
+            )}
+
             {/* Description paragraph */}
             <p
-              className="font-poppins font-normal mb-10 sm:mb-14"
+              className="font-poppins font-normal mb-8"
               style={{
                 fontSize: "clamp(13px, 3.5vw, 14px)",
-                lineHeight: "1.7",
+                lineHeight: "1.6",
                 color: "var(--color-text)",
-                maxWidth: "195px",
+                maxWidth: "200px",
               }}
             >
               {slideDescription}
             </p>
 
-            {/* Deal 360 paragraph */}
+            {/* Deal 360 paragraph or Footer for Slide 3 */}
             <p
-              className="font-poppins font-normal"
+              className="font-poppins font-normal mb-6"
               style={{
                 fontSize: "clamp(13px, 3.5vw, 14px)",
-                lineHeight: "1.7",
+                lineHeight: "1.6",
                 color: "var(--color-text)",
-                maxWidth: "195px",
+                maxWidth: "200px",
               }}
             >
               {slideDeal360Text}
             </p>
+
+            {mobilePhoneImage === "/smartfilteroverlap3.png" && (
+                <p
+                  className="font-poppins font-medium mt-4"
+                  style={{
+                    fontSize: "13px",
+                    color: "var(--color-text)",
+                  }}
+                >
+                  With Property Manager you can:
+                </p>
+            )}
           </div>
 
           {/* Phone mockup - absolutely positioned within top section */}
@@ -387,7 +412,7 @@ function Slide({
             alt="App screenshot"
             className="absolute object-contain"
             style={{
-              right: "0%",
+              right: "-20%", // Margin right in negative to hide some part as requested
               top: "35%",
               height: "65%",
               maxHeight: "345px",
@@ -400,6 +425,7 @@ function Slide({
           className="relative z-10 px-6 sm:px-8 py-8"
           style={{
             background: mobileGradient,
+            minHeight: "280px", // Standardize height for bullets section on mobile
           }}
         >
           <div className="flex flex-col gap-6 sm:gap-8">
@@ -443,7 +469,7 @@ const SLIDES_DATA = [
     slideTitle: "Sell or Rent with Control.",
     slideDescription:
       "Owners declare Listing Intent before going live and connect with agents aligned to genuine demand — without broadcasting their property everywhere.",
-    // slideDeal360Text: "Deal 360 connects structured intent with aligned demand.",
+    slideDeal360Text: "Deal 360 connects structured intent with aligned demand.",
     bulletsMobile: MOBILE_BULLETS1,
     bulletsDesktop: DESKTOP_BULLETS1,
     desktopGradient: "linear-gradient(90deg, #F88379 0%, #FFA79F 100%), #F88379",
@@ -457,7 +483,7 @@ const SLIDES_DATA = [
     slideTitle: "Property Manager",
     slideDescription:
       "Track rental income, tenancy dates, and overall portfolio performance in one structured dashboard — built for landlords and investors managing multiple properties.",
-    slideDeal360Text: "",
+    slideDeal360Text: "Stay organized across units, tenants, and agents with ease.",
     bulletsMobile: MOBILE_BULLETS2,
     bulletsDesktop: DESKTOP_BULLETS2,
     desktopGradient: "linear-gradient(90deg, #7FFFD4 0%, #A5FFE1 100%), #7FFFD4",
@@ -500,7 +526,7 @@ export default function SmartFilter() {
   return (
     <div className="w-full font-poppins bg-[#EDEEF0] md:mt-20 md:mb-30 mt-10 relative">
       {/* Slide container with smooth transition */}
-      <div className="transition-opacity duration-500 h-full">
+      <div className="transition-opacity duration-500">
         <div className="relative flex items-center justify-center">
           {/* Previous Arrow - Desktop */}
           <button

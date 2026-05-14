@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 17% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+     --Colors-for-white-theme-Secondary: #F88379;
+     --Colors-for-white-theme-White: #FFFFFF;
+     --Colors-for-white-theme-Gray-Text: #999999;
+     --Colors-for-white-theme-Secondary-text:#565656;
+     --Secondary-Color:#181818;
+
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 160 100% 75%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 4 91% 72%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 38%;
+    --input: 0 0% 38%;
+    --ring: 160 100% 75%;
+
+    --radius: 0.5rem;
+
+    /* Brand */
+    --brand-primary: 160 100% 75%;
+    --brand-secondary: 4 91% 72%;
+    --brand-secondary1: #FFECEA;
+    --brand-grey-label: 0 0% 38%;
+    --brand-grey-placeholder: 208 7% 46%;
+    --brand-neutral: 136 4% 43%;
+
+
+    --brand-white: 210 17% 98%;
+    --brand-dark: 210 10% 23%;
+    --brand-grey: 208 7% 46%;
+    --dark-grey: #424242;
+
+    --brand-grey-300: 0 0% 38%;
+    /* --brand-mint-light: 151 89% 96%; */
+    --brand-mint-light: #DBFFF3;
+
+    --text-grey:#68706A;
+    --base-black:#343A40;
+
+      /* ── Form theme variables (light) ── */
+    --form-bg: #F8F9FA;
+    --form-text: #4B4B4B;
+    --form-text-black: #000000;
+    --form-border: #CAD5E2;
+    --form-input-bg: #ffffff;
+    --form-section-bg: #F1F5F9;
+    --form-selected-bg: #FFDEDB;
+    --form-selected-border: #FFC1BC;
+    --form-primary: #F88379;
+    --form-primary-foreground: #F8F9FA;
+    --form-secondary: #7FFFD4;
+    --form-placeholder: #A5A5A5;
+    --form-placeholder-light: #C7C7C7;
+    --form-checkbox-bg: #DFFFF4;
+    --form-checkbox-border: #000000;
+    /* --form-alert-text: #F88379; */
+    --form-back-btn-bg: #D7D7D7;
+    --form-back-btn-text: #000000;
+    --form-icon: #4B4B4B;
+
+
+  }
+}
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 80%;
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 80%;
+
+    /* ── Form theme variables (dark) ── */
+    --form-bg: #000000;
+    --form-text: rgba(255, 255, 255, 0.7);
+    --form-text-black: #ffffff;
+    --form-border: #333333;
+    --form-input-bg: #000000;
+    --form-section-bg: #111111;
+    --form-selected-bg: #222222;
+    --form-selected-border: #444444;
+    --form-primary: #F88379;
+    --form-primary-foreground: #ffffff;
+    --form-secondary: #7FFFD4;
+    --form-placeholder: rgba(255, 255, 255, 0.4);
+    --form-placeholder-light: rgba(255, 255, 255, 0.3);
+    --form-checkbox-bg: #000000;
+    --form-checkbox-border: #ffffff;
+    --form-alert-text: #F88379;
+    --form-back-btn-bg: #111111;
+    --form-back-btn-text: rgba(255, 255, 255, 0.7);
+    --form-icon: rgba(255, 255, 255, 0.7);
+  }
+
+
+html {
+  font-size: clamp(12px, calc(0.4464vw + 7.4285px), 16px);
+}
+
+html, body, #root {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Poppins" !important;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins";
+  }
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+/* ─── Reusable component classes ──────────────────────────────── */
+@layer components {
+  /* Inputs */
+  .form-input {
+    @apply w-full h-12 px-3 py-2 rounded border border-[#616161] bg-white
+           text-base font-normal text-[#6C757D] placeholder-[#6C757D]
+           outline-none transition-colors duration-200;
+    font-family: 'Manrope', sans-serif;
+  }
+  /* .form-input:focus {
+    @apply border-[#7FFFD4] ring-2 ring-[#7FFFD4]/30;
+  } */
+
+  /* Buttons */
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 px-8 py-4 rounded-lg
+           bg-[#7FFFD4] text-black font-medium text-base transition-opacity duration-200;
+    font-family: 'Manrope', sans-serif;
+  }
+  .btn-primary:hover {
+    @apply opacity-90;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-center gap-2 px-8 py-4 rounded-lg
+           bg-[#F88379] text-black font-medium text-base transition-opacity duration-200;
+    font-family: 'Manrope', sans-serif;
+  }
+  .btn-secondary:hover {
+    @apply opacity-90;
+  }
+
+  .btn-outline {
+    @apply flex items-center justify-center gap-2 px-8 py-4 rounded-lg
+           border-2 border-[#7FFFD4] bg-white text-black font-medium text-base
+           shadow transition-opacity duration-200;
+    font-family: 'Manrope', sans-serif;
+  }
+  .btn-outline:hover {
+    @apply opacity-80;
+  }
+}
+
+/* ── Dark Mode Global Overrides ── */
+.dark .bg-white,
+.dark .bg-\[\#FFF\],
+.dark .bg-\[\#FFFFFF\],
+.dark .bg-\[\#ffffff\],
+.dark .bg-\[\#fff\],
+.dark .bg-\[\#FFF9F9\],
+.dark .bg-\[\#FFFAFA\],
+.dark .bg-gray-50,
+.dark .bg-gray-100,
+.dark .bg-gray-200,
+.dark .bg-background,
+.dark .bg-card,
+.dark .bg-popover,
+.dark .bg-\[var\(--form-bg\)\] {
+  background-color: #000000 !important;
+}
+
+.dark .text-\[\#0A0A0A\],
+.dark .text-\[\#111827\],
+.dark .text-\[\#4B5563\],
+.dark .text-\[\#374151\],
+.dark .text-\[\#6B7280\],
+.dark .text-\[\#4B4B4B\],
+.dark .text-\[\#717182\],
+.dark .text-\[\#6C757D\],
+.dark .text-\[\#45556C\],
+.dark .text-\[\#343A40\],
+.dark .text-\[\#000000\],
+.dark .text-\[\#000\],
+.dark .text-black,
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-\[var\(--Secondary-Color\)\],
+.dark .text-\[var\(--Colors-for-white-theme-Secondary-text\)\],
+.dark .text-\[var\(--Colors-for-white-theme-Secondary\)\] {
+  color: #ffffff !important;
+}
+
+.dark .text-\[\#6B7280\],
+.dark .text-\[\#9CA3AF\],
+.dark .text-\[\#717182\],
+.dark .text-\[\#68706A\],
+.dark .text-\[\#555555\],
+.dark .text-\[\#666666\],
+.dark .text-gray-500,
+.dark .text-gray-400,
+.dark .text-muted-foreground,
+.dark .text-\[var\(--Colors-for-white-theme-Gray-Text\)\],
+.dark .text-\[var\(--form-text\)\],
+.dark .text-\[var\(--text-grey\)\] {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.dark .border-\[\#E5E7EB\],
+.dark .border-\[\#E6E7E6\],
+.dark .border-\[\#D1D5DB\],
+.dark .border-black\/10,
+.dark .border-border {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+
+
+
